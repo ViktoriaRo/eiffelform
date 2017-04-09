@@ -56,6 +56,12 @@ function resetPHD(){
 	obj.removeChild(obj.lastChild);
 	obj.removeChild(obj.lastChild);
 }
+
+function getPHDincrementAndRedirect(){
+	document.getElementById("PHDthesis_i").value = PhDthesis_i;
+	location.href = "section3.html"l
+}
+
 /*
 ----------------------------------------------------------------------------
 
