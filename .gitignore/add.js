@@ -58,8 +58,8 @@ function resetPHD(){
 }
 
 function getPHDincrementAndRedirect(){
-	document.getElementById("PHDthesis_i").value = PhDthesis_i;
-	location.href = "section3.html"l
+	document.getElementById("PHDthesis_i").value = PhDthesis_i+" ";
+	location.href = "section3.html";
 }
 
 /*
