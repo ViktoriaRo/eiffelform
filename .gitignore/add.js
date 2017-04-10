@@ -512,7 +512,7 @@ function membershipFunction(){
 	obj.appendChild(e);
 	
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"date_\"" + membership_i +" class=\"uname\">Date of membership</label><input class=\"form-control\" id=\"date_\"" + membership_i +" type=\"date\" />";
+	e.innerHTML = "<label for=\"m_date_\"" + membership_i +" class=\"uname\">Date of membership</label><input class=\"form-control\" id=\"m_date_\"" + membership_i +" type=\"date\" />";
 	e.setAttribute("class","inst" + membership_i);
 	obj.appendChild(e);
 	membership_i+=1;
