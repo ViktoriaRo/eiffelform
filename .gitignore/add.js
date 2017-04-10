@@ -479,7 +479,7 @@ function paperAwardFunction(){
 	obj.appendChild(e);
 	
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"date_\"" + paperAward_i +" class=\"uname\">Date</label><input class=\"form-control\" id=\"date_\"" + paperAward_i +" type=\"date\" />";
+	e.innerHTML = "<label for=\"b_date_\"" + paperAward_i +" class=\"uname\">Date</label><input class=\"form-control\" id=\"b_date_\"" + paperAward_i +" type=\"date\" />";
 	e.setAttribute("class","inst" + paperAward_i);
 	obj.appendChild(e);
 	
