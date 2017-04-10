@@ -259,19 +259,21 @@ Functions that will be called upon, when user click on the +.
 
 ----------------------------------------------------------------------------
 */
-var licFunction_i = 0;
+var licFunction_i = 1;
 function licFunction(){
 	var obj = document.getElementById('lic');
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"license\"" + licFunction_i +" class=\"uname\">License granted</label><input class=\"form-control\" id=\"license\"" + licFunction_i +" type=\"text\" />";
+	e.innerHTML = "<label for=\"license_\"" + licFunction_i +" class=\"uname\">License granted</label><input class=\"form-control\" id=\"license_\"" + licFunction_i +" type=\"text\" />";
 	e.setAttribute("class","inst" + licFunction_i);
 	obj.appendChild(e);
 	licFunction_i+=1;
 }
 function resetLicense(){
-	licFunction_i-=1;
-	var obj = document.getElementById('lic');
-	obj.removeChild(obj.lastChild);
+	if(licFunction_i>1){
+		licFunction_i-=1;
+		var obj = document.getElementById('lic');
+		obj.removeChild(obj.lastChild);
+	}
 }
 /*
 ----------------------------------------------------------------------------
