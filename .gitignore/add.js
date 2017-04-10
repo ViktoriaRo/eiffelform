@@ -1,8 +1,3 @@
-var i = 0; /* Set Global Variable i */
-function increment(){
-i += 1; /* Function for automatic increment of field's "Name" attribute. */
-}
-
 /*
 ----------------------------------------------------------------------------
 
@@ -55,11 +50,6 @@ function resetPHD(){
 	obj.removeChild(obj.lastChild);
 	obj.removeChild(obj.lastChild);
 	obj.removeChild(obj.lastChild);
-}
-
-function getFirstIncrement(){
-	document.getElementById("increment").value = PhDthesis_i;
-	location.href = "section3.html";
 }
 
 /*
@@ -273,26 +263,26 @@ Functions that will be called upon, when user click on the +.
 
 ----------------------------------------------------------------------------
 */
-var course_i = 0;
+var course_i = 1;
 function courseFunction(){
 	var obj = document.getElementById('course');
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"c_name\"class=\"uname\">Course name:</label><input class=\"form-control\" id=\"c_name\" type=\"text\" />";
+	e.innerHTML = "<label for=\"c_name_"+course_i+"\""class=\"uname\">Course name:</label><input class=\"form-control\" id=\"c_name_"+course_i+\" type=\"text\" />";
 	e.setAttribute("class","inst" + course_i);
 	obj.appendChild(e);
 	
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"semester\" class=\"uname\">Semester</label><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"semester\" value=\"Fall\" type=\"radio\" /><i>Fall&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"semester\" value=\"Spring\" type=\"radio\" />Spring</i>";
+	e.innerHTML = "<label for=\"semester_"+course_i+"\" class=\"uname\">Semester</label><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"semester+"+course_i+"\" value=\"Fall\" type=\"radio\" /><i>Fall&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"semester_"+course_i+"\" value=\"Spring\" type=\"radio\" />Spring</i>";
 	e.setAttribute("class","inst" + course_i);
 	obj.appendChild(e);
 	
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"level\" class=\"uname\">Level </label><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"level\" value=\"bach\" type=\"radio\" /><i>Bachelor&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"level\" value=\"master\" type=\"radio\" />Master&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"level\" value=\"phd\" type=\"radio\" />PhD</i>";
+	e.innerHTML = "<label for=\"level_"+course_i+"\" class=\"uname\">Level </label><br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"level_"+course_i+"\" value=\"bach\" type=\"radio\" /><i>Bachelor&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"level_"+course_i+"\" value=\"master\" type=\"radio\" />Master&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input name=\"level_"+course_i+"\" value=\"phd\" type=\"radio\" />PhD</i>";
 	e.setAttribute("class","inst" + course_i);
 	obj.appendChild(e);
 	
 	var e = document.createElement("p");
-	e.innerHTML = "<label for=\"students\" class=\"uname\">Approximate number of students</label><input class=\"form-control\" id=\"students\" type=\"text\" />";
+	e.innerHTML = "<label for=\"students_"+course_i+"\" class=\"uname\">Approximate number of students</label><input class=\"form-control\" id=\"students_"+course_i+"\" type=\"text\" />";
 	e.setAttribute("class","inst" + course_i);
 	obj.appendChild(e);
 	
@@ -305,6 +295,11 @@ function resetCourse(){
 	obj.removeChild(obj.lastChild);	
 	obj.removeChild(obj.lastChild);
 	obj.removeChild(obj.lastChild);
+}
+
+function getFirstInc(){
+	document.getElementById("course_i").value = course_i;
+	location.href = "setion3.html"
 }
 /*
 ----------------------------------------------------------------------------
