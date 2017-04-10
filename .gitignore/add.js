@@ -439,7 +439,7 @@ function getSec5Incs(){
 	document.getElementById('paperAward_i').value = paperAward_i;
 	document.getElementById('membership_i').value = membership_i;
 	document.getElementById('prize_i').value = prize_i;
-	location.href = "section5.html";
+	location.href = "section6.html";
 }
 
 function getSec6Incs(){
