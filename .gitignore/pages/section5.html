@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Innopolis University: unit annual report</title>
+		<link rel="stylesheet" type="text/css" href="https://rawgit.com/gorex013/eiffelform/master/.gitignore/format.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<script src="https://rawgit.com/gorex013/eiffelform/master/.gitignore/add.js" type="text/javascript"></script>
+   </head>
+    <body style = "background-image : url('https://rawgit.com/gorex013/eiffelform/master/.gitignore/inno.jpg')">
+        <div class="container">
+            <header>
+                <h1>Innopolis University: unit annual report, 2017</h1>
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form method="POST" action= "section6.html"> 
+                                <h1>Section 5: distinctions</h1> 
+                                 <p> 
+                                    <label class="uname" ><b> Best paper awards </b></label>
+									<hr>
+                                </p>
+								<p>
+									<label for="author_0" class="uname">Author of the awarded article</label>
+									<input class="form-control" id="author_0" type="text" />
+								</p>
+								<p>
+									<label for="article_0" class="uname">Title of the article</label>
+									<input class="form-control" id="article_0" type="text" />
+								</p>
+								<p>
+									<label for="conf_0" class="uname">Awarding conference or journal</label>
+									<input class="form-control" id="conf_0" type="text" />
+								</p>
+								<p>
+									<label for="ording_0" class="uname">Exact wording of award</label>
+									<input class="form-control" id="ording_0" type="text" />
+								</p>
+								<p> 
+                                    <label for="b_date_0" class="uname" >Date</label>
+									<input class="form-control" type=date id="b_date_0">
+									<script>
+											document.getElementById('date_0').value = new Date().toISOString().substring(0, 10);
+									</script>
+                                </p>
+								<span id="paperAward"></span>
+								<div class="wrapperBtn">
+								<p class="addButton myBtnForm"> 
+									<input type="button" value="+" onclick="paperAwardFunction()">
+								</p>
+								<p class="removeButton myBtnForm"> 
+									<input type="button" value="-" onclick="resetPaperAward()">
+								</p>
+								</div>
+								<input type = "hidden" id = "paperAward_i"/>
+								<p> 
+                                    <label class="uname" ><b> Memberships </b></label>
+									<hr>
+                                </p>
+								Membership in academies, international working groups (for example IFIP or ACM), standards committees (e.g. ISO, Ecma) etc.
+								
+								<p>
+								<br>
+									<label for="member_0" class="uname">Name of member</label>
+									<input class="form-control" id="member_0" type="text" />
+								</p>
+								<p> 
+                                    <label for="m_date_0" class="uname" >Date of membership</label>
+									<input class="form-control" type=date id="m_date_0">
+									<script>
+											document.getElementById('date_0').value = new Date().toISOString().substring(0, 10);
+									</script>
+                                </p>
+								<span id="membership"></span>
+								<div class="wrapperBtn">
+								<p class="addButton myBtnForm"> 
+									<input type="button" value="+" onclick="membershipFunction()">
+								</p>
+								<p class="removeButton myBtnForm"> 
+									<input type="button" value="-" onclick="resetMembership()">
+								</p>
+								</div>
+								<input type = "hidden" id = "membership_i"/>
+								 <p> 
+                                    <label class="uname" ><b> Prizes </b></label>
+									<hr>
+                                </p>
+								<p>
+									<label for="recip_0" class="uname">Recipient</label>
+									<input class="form-control" id="recip_0" type="text" />
+								</p>
+								<p>
+									<label for="prize_0" class="uname">Name of prize</label>
+									<input class="form-control" id="prize_0" type="text" />
+								</p>
+								<p>
+									<label for="inst_0" class="uname">Granting institution</label>
+									<input class="form-control" id="inst_0" type="text" />
+								</p>
+								<p> 
+                                    <label for="date_0" class="uname" >Date</label>
+									<input class="form-control" type=date id="date_0">
+									<script>
+											document.getElementById('date_0').value = new Date().toISOString().substring(0, 10);
+									</script>
+                                </p>
+								<span id="prizes">
+								</span>
+								<div class="wrapperBtn">
+								<p class="addButton myBtnForm"> 
+									<input type="button" value="+" onclick="prizeFunction()">
+								</p>
+								<p class="removeButton myBtnForm"> 
+									<input type="button" value="-" onclick="resetPrize()">
+								</p>
+								</div>
+								<input type = "hidden" id="prize_i"/>
+                                <p class="button"> 
+									<input type="button" value="Next" onClick='getSec5Incs()' class="myButton">
+								</p>
+                                 <p class="change_link">
+									This section covered honors received by the unit's members.
+								</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>

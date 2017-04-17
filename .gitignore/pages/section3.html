@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+        <meta charset="UTF-8" />
+        <title>Innopolis University: unit annual report</title>
+		<link rel="stylesheet" type="text/css" href="https://rawgit.com/gorex013/eiffelform/master/.gitignore/format.css" />
+		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+		<script src="https://rawgit.com/gorex013/eiffelform/master/.gitignore/add.js" type="text/javascript"></script>
+    </head>
+    <body style = "background-image : url('https://rawgit.com/gorex013/eiffelform/master/.gitignore/inno.jpg')">
+        <div class="container">
+           
+            <header>
+                <h1>Innopolis University: unit annual report, 2017</h1>
+				
+            </header>
+            <section>				
+                <div id="container_demo" >
+                    <a class="hiddenanchor" id="toregister"></a>
+                    <a class="hiddenanchor" id="tologin"></a>
+                    <div id="wrapper">
+                        <div id="login" class="animate form">
+                            <form method="POST" action = "section4.html"> 
+                                <h1>Section 3: research</h1> 
+                                <p> 
+									<label for="grants" class="uname" ><b> Grants </b></label>
+									<hr>
+                                </p>
+								<p> 
+                                    <label for="project_0" class="uname" > Title of project: </label>
+                                    <input class="form-control" required = "required" id="project_0" type="text" />
+									<font color="red" size="2"><span id="project_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="agency_0" class="uname" > Granting agency: </label>
+                                    <input class="form-control" required = "required" id="agency_0" type="text" />
+									<font color="red" size="2"><span id="agency_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="period_0" class="uname" > Period covered by grant: </label>
+                                    <input class="form-control" required = "required" id="period_0" type="text" />
+									<font color="red" size="2"><span id="period_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="cont_0" class="uname" > Whether continuation of other grant </label>
+                                    <input class="form-control" required = "required" id="cont_0" type="text" />
+									<font color="red" size="2"><span id="cont_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="amount_0" class="uname" > Amount: </label>
+                                    <input class="form-control" required = "required" id="amount_0" type="text" />
+									<font color="red" size="2"><span id="amount_0_error"></span></font>
+                                </p>
+								<span id="grants"></span>
+								<div class="wrapperBtn">
+								<p class="addButton myBtnForm"> 
+									<input type="button" value="+" onclick="grantsFunction()">
+								</p>
+								<p class="removeButton myBtnForm"> 
+									<input type="button" value="-" onclick="resetGrants()">
+								</p>
+								</div>
+								<input type = "hidden" id = "grants_i"/>
+								<p> 
+									<label class="uname" ><b> Research projects </b></label>
+									<hr>
+                                </p>
+								<p> 
+                                    <label for="t_of_project_0" class="uname" > Title of project: </label>
+                                    <input class="form-control" required = "required" id="t_of_project_0" type="text" />
+									<font color="red" size="2"><span id="t_of_project_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="personnel_0" class="uname" > Innopolis University personnel involved: </label>
+                                    <input class="form-control" required = "required" id="personnel_0" type="text" />
+									<font color="red" size="2"><span id="personnel_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="ext_personnel_0" class="uname" > External personnel involved if any: </label>
+                                    <input class="form-control" required = "required" id="ext_personnel_0" type="text" />
+									<font color="red" size="2"><span id="ext_personnel_0_error"></span></font>
+                                </p>
+								<p> 
+                                    <label for="start_of_project_0" class="uname" >Start date of project</label>
+									<input class="form-control" type=date id="start_of_project_0">
+									<script>
+											document.getElementById('start_of_project_0').value = new Date().toISOString().substring(0, 10);
+									</script>
+                                </p>
+								<p>
+								<label for="end_of_project_0" class="uname" > Expected end date</label>
+									<input class="form-control" type=date id="end_of_project_0">
+									<script>
+											document.getElementById('end_of_project_0').value = new Date().toISOString().substring(0, 10);
+									</script>
+									<font color="red" size="2"><span id="financing_0_error"></span></font>
+								</p>
+								<p>
+                                    <label for="financing_0" class="uname" > Sources of financing: </label>
+                                    <input class="form-control" id="financing_0" type="text" />
+									
+                                </p>
+								<span id="rsProject"></span>
+								<div class="wrapperBtn">
+								<p class="addButton myBtnForm"> 
+									<input type="button" value="+" onclick="rsProjectFunction()">
+								</p>
+								<p class="removeButton myBtnForm"> 
+									<input type="button" value="-" onclick="resetRsProject()">
+								</p>
+								</div>
+								<input type = "hidden" id = "rsProject_i"/>
+								<p> 
+									<label class="uname" ><b> Research collaborations </b></label>
+									<hr>
+                                </p>
+								<p> 
+                                    <label for="country_0" class="uname" > Country of institution: </label>
+                                    <input class="form-control" id="country_0" type="text" />
+                                </p>
+								<p> 
+                                    <label for="institution_0" class="uname" > Name of institution (and department or unit if relevant) </label>
+                                    <input class="form-control" id="institution_0" type="text" />
+                                </p>
+								<p> 
+                                    <label for="principal_contact_0" class="uname" > Name of principal contact: </label>
+                                    <input class="form-control" id="principal_contact_0" type="text" />
+                                </p>
+								<p> 
+                                    <label for="other_contacts_0" class="uname" > Other important contacts: </label>
+                                    <input class="form-control" id="other_contacts_0" type="text" />
+                                </p>
+								<p> 
+                                    <label for="collaboration_0" class="uname" > Nature of collaboration </label>
+                                    <input class="form-control" id="collaboration_0" type="text" />
+                                </p>
+								<span id="rsColab"></span>
+								<div class="wrapperBtn">
+								<p class="addButton myBtnForm"> 
+									<input type="button" value="+" onclick="rsColabFunction()">
+								</p>
+								<p class="removeButton myBtnForm"> 
+									<input type="button" value="-" onclick="resetRsColab()">
+								</p>
+								</div>
+								<input type =hidden id = "rsColab_i"/>
+								<p> 
+									<label for = "conference" class="uname" ><b> Conference publications </b></label>
+									<hr>
+                                </p>
+								Numbered list. Indicate all publications of which members of the unit are authors or coauthors. Use standard style for scientific bibliography entries.
+								<p>
+									<textarea id = "conference" rows="3" cols="63"></textarea>
+								</p>
+								
+								<p> 
+									<label for = "journal" class="uname" ><b> Journal publications</b> </label>
+									<hr>
+                                </p>
+								Numbered list. Indicate all publications of which members of the unit are authors or coauthors. Use standard style for scientific bibliography entries.
+								<p>
+									<textarea id= "journal" rows="3" cols="63"></textarea>
+								</p>
+                                <p class="button"> 
+									<input type="submit" value="Next" onClick='checkFormSection3()' class="myButton">
+								</p>
+                                <p class="change_link">
+									This section covered research and publication activities of your unit.
+								</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>  
+            </section>
+        </div>
+    </body>
+</html>
