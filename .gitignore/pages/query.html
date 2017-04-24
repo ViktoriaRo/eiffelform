@@ -1,59 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <title>Innopolis University: unit annual report</title>
-		<link rel="stylesheet" type="text/css" href="https://rawgit.com/gorex013/eiffelform/master/.gitignore/format.css" />
-		<link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet"
-	
-   </head>
-    <body style = "background-image : url('https://rawgit.com/gorex013/eiffelform/master/.gitignore/inno.jpg')">
-        <div class="container">
-            <header>
-                <h1>Innopolis University: unit annual report, 2017</h1>
-            </header>
-            <section>				
-                <div id="container_demo" >
-                    <div id="wrapper">
-                        <div id="login" class="animate form">
-                            <form> 
-                                <h1>Administrator page</h1> 
-                               
-								<p> 
-                                    <label for="year" class="uname" >Enter a year and press the button <i>Show</i> </label>
-                                    <input class="form-control" id="a" type="text" required/>
-                                </p>
-                                <span id="year"></span> 
-								<p class="queryButton"> 
-									<input type="button" value="Show" onclick="yearFunction()">
-								</p>                              
-								<p> 
-                                    <label for="unit" class="uname" >Enter a unit </label>
-                                    <input class="form-control" id="unit" type="text" required/>
-                                </p>
-                                <span id="unit"></span>
-								<p class="queryButton"> 
-									<input type="button" value="Show" onclick="unitFunction()">
-								</p>
-								
-								<p> 
-                                    <label for="dat" class="uname" > Initial and final date </label>
-                                    <input class="form-control" type=date id="init">
-									<input class="form-control" type=date id="final">
-                                </p>
-                                <span id="unit"></span>
-								<p class="queryButton"> 
-									<input type="button" value="Show" onclick="dateFunction()">
-								</p>
-								
-                                <p class="change_link">
-								</p>
-								
-                            </form>
-                        
-                    </div>
-                </div>  
-            </section>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Innopolis University: unit annual report</title>
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/gorex013/eiffelform/master/format.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+</head>
+<body style="background-image : url('https://rawgit.com/gorex013/eiffelform/master/inno.jpg')">
+<div class="container">
+    <header>
+        <h1>Innopolis University: unit annual report, 2017</h1>
+    </header>
+    <section>
+        <div id="container_demo">
+            <div id="wrapper">
+                <div id="login" class="animate form">
+                    <form>
+                        <h1>Administrator page</h1>
+                        <p>
+                            <label for="year" class="uname">All publications of the university in a given year </label>
+                            <input class="form-control" id="a" type="text" required/>
+                        </p>
+
+                        <p class="queryButton">
+                            <input type="button" value="Show" onclick="yearFunction()">
+                        </p>
+                        <p>
+                            <label for="unit" class="uname">Cumulative info of a given unit over several years </label>
+                            <input class="form-control" id="a_unit" type="text" required/>
+                        </p>
+
+                        <p class="queryButton">
+                            <input type="button" value="Show" onclick="unitFunction()">
+                        </p>
+
+                        <p>
+                            <label for="init" class="uname"> Courses taught by a Laboratory between initial and final
+                                date </label>
+                            <input class="form-control" type=date id="init">
+                            <input class="form-control" type=date id="final">
+                        </p>
+
+                        <p class="queryButton">
+                            <input type="button" value="Show" onclick="dateFunction()">
+                        </p>
+                        <p>
+                            <label for="lab" class="uname"> Number of supervised students by Laboratories </label>
+                            <input class="form-control" id="lab" type="text" required/>
+                        </p>
+
+                        <p class="queryButton">
+                            <input type="button" value="Show" onclick="labFunction()">
+                        </p>
+                        <p>
+                            <label for="research" class="uname"> Number of research collaboration, if any, by
+                                Laboratories </label>
+                            <input class="form-control" id="research" type="text" required/>
+                        </p>
+
+                        <p class="queryButton">
+                            <input type="button" value="Show" onclick="researchFunction()">
+                        </p>
+                        <p class="change_link">
+                        </p>
+
+                    </form>
+
+                </div>
+            </div>
         </div>
-    </body>
+    </section>
+</div>
+</body>
 </html>
